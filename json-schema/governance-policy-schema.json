@@ -1,0 +1,147 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/governance/main/json-schema/governance-policy-schema.json",
+  "title": "Governance Policy",
+  "description": "A governance policy bundles related rules and applies them with a defined scope, lifecycle stage, ownership, and enforcement engine across the API estate.",
+  "type": "object",
+  "required": ["id", "name", "scope", "rules"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique, stable identifier for the policy (kebab-case)."
+    },
+    "name": {
+      "type": "string",
+      "description": "Human-readable policy name."
+    },
+    "description": {
+      "type": "string",
+      "description": "What the policy governs and the business intent behind it."
+    },
+    "scope": {
+      "type": "string",
+      "enum": [
+        "spec",
+        "design",
+        "security",
+        "lifecycle",
+        "experience",
+        "compliance",
+        "performance"
+      ],
+      "description": "Governance scope the policy belongs to."
+    },
+    "target": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "openapi",
+          "asyncapi",
+          "json-schema",
+          "graphql",
+          "grpc",
+          "avro",
+          "protobuf",
+          "traffic",
+          "policy",
+          "configuration",
+          "apis-yml"
+        ]
+      },
+      "description": "Artifact types the policy applies to."
+    },
+    "lifecycle": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "design",
+          "build",
+          "test",
+          "release",
+          "deprecation",
+          "retirement",
+          "runtime"
+        ]
+      },
+      "description": "Lifecycle stages where the policy is enforced."
+    },
+    "enforcement": {
+      "type": "string",
+      "enum": ["advisory", "blocking", "remediated", "monitored"],
+      "description": "How violations of the policy are handled."
+    },
+    "engine": {
+      "type": "string",
+      "enum": ["spectral", "vacuum", "redocly", "speakeasy", "postman", "apicurio", "custom"],
+      "description": "Engine that enforces the policy at runtime or in CI."
+    },
+    "conformance": {
+      "type": "string",
+      "enum": ["MUST", "SHOULD", "MAY", "MUST NOT", "SHOULD NOT"],
+      "description": "RFC 2119 requirement level for the policy as a whole."
+    },
+    "rules": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "description": "ID of a governance rule included in this policy."
+      },
+      "minItems": 1,
+      "description": "Rule IDs composed into the policy."
+    },
+    "owner": {
+      "type": "string",
+      "description": "Person or governance body accountable for the policy."
+    },
+    "approvers": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Stakeholders who must approve changes to the policy."
+    },
+    "exceptions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "api": { "type": "string" },
+          "reason": { "type": "string" },
+          "expires": { "type": "string", "format": "date" }
+        },
+        "required": ["api", "reason"]
+      },
+      "description": "Approved exemptions from this policy."
+    },
+    "tags": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Domain tags for grouping and discovery."
+    },
+    "guidanceUrl": {
+      "type": "string",
+      "format": "uri",
+      "description": "Link to longer-form guidance backing the policy."
+    },
+    "status": {
+      "type": "string",
+      "enum": ["draft", "active", "deprecated", "retired"],
+      "description": "Lifecycle status of the policy itself."
+    },
+    "version": {
+      "type": "string",
+      "description": "Semantic version of the policy."
+    },
+    "created": {
+      "type": "string",
+      "format": "date",
+      "description": "ISO 8601 creation date."
+    },
+    "modified": {
+      "type": "string",
+      "format": "date",
+      "description": "ISO 8601 last-modified date."
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,140 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/governance/main/json-schema/governance-rule-schema.json",
+  "title": "Governance Rule",
+  "description": "A machine-enforceable governance rule applied to an API artifact (OpenAPI, AsyncAPI, JSON Schema, traffic, configuration) by a linter, registry, gateway, or runtime.",
+  "type": "object",
+  "required": ["id", "name", "severity", "target", "scope", "message"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique, stable identifier for the rule (kebab-case)."
+    },
+    "name": {
+      "type": "string",
+      "description": "Short human-readable name for the rule."
+    },
+    "description": {
+      "type": "string",
+      "description": "Full description of what the rule checks and why."
+    },
+    "message": {
+      "type": "string",
+      "description": "Message shown when the rule is violated."
+    },
+    "rationale": {
+      "type": "string",
+      "description": "Business or engineering reason the rule exists."
+    },
+    "severity": {
+      "type": "string",
+      "enum": ["error", "warn", "warning", "info", "hint"],
+      "description": "Severity level emitted on violation."
+    },
+    "target": {
+      "type": "string",
+      "enum": [
+        "openapi",
+        "asyncapi",
+        "json-schema",
+        "graphql",
+        "grpc",
+        "avro",
+        "protobuf",
+        "traffic",
+        "policy",
+        "configuration",
+        "apis-yml"
+      ],
+      "description": "Artifact type the rule targets."
+    },
+    "scope": {
+      "type": "string",
+      "enum": [
+        "spec",
+        "design",
+        "security",
+        "lifecycle",
+        "experience",
+        "compliance",
+        "performance"
+      ],
+      "description": "Governance scope the rule belongs to."
+    },
+    "lifecycle": {
+      "type": "string",
+      "enum": [
+        "design",
+        "build",
+        "test",
+        "release",
+        "deprecation",
+        "retirement",
+        "runtime"
+      ],
+      "description": "Lifecycle stage at which the rule is enforced."
+    },
+    "given": {
+      "type": "string",
+      "description": "JSONPath, JMESPath, or selector locating the value the rule applies to."
+    },
+    "then": {
+      "type": "object",
+      "description": "Action taken when the rule matches.",
+      "additionalProperties": true
+    },
+    "function": {
+      "type": "string",
+      "description": "Name of the function the rule invokes (e.g. truthy, falsy, pattern, length)."
+    },
+    "functionOptions": {
+      "type": "object",
+      "description": "Parameters passed to the function.",
+      "additionalProperties": true
+    },
+    "conformance": {
+      "type": "string",
+      "enum": ["MUST", "SHOULD", "MAY", "MUST NOT", "SHOULD NOT"],
+      "description": "RFC 2119 requirement level the rule expresses."
+    },
+    "engine": {
+      "type": "string",
+      "enum": ["spectral", "vacuum", "redocly", "speakeasy", "postman", "custom"],
+      "description": "Engine that evaluates the rule."
+    },
+    "tags": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Domain tags for grouping and discovery."
+    },
+    "guidanceUrl": {
+      "type": "string",
+      "format": "uri",
+      "description": "Link to longer-form guidance backing the rule."
+    },
+    "owner": {
+      "type": "string",
+      "description": "Person or governance body accountable for the rule."
+    },
+    "created": {
+      "type": "string",
+      "format": "date",
+      "description": "ISO 8601 creation date."
+    },
+    "modified": {
+      "type": "string",
+      "format": "date",
+      "description": "ISO 8601 last-modified date."
+    },
+    "version": {
+      "type": "string",
+      "description": "Semantic version of the rule."
+    },
+    "status": {
+      "type": "string",
+      "enum": ["draft", "active", "deprecated", "retired"],
+      "description": "Lifecycle status of the rule itself."
+    }
+  },
+  "additionalProperties": false
+}

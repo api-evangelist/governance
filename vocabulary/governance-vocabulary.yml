@@ -1,0 +1,171 @@
+name: API Governance Vocabulary
+description: >-
+  Controlled vocabulary for API governance — the terms used to describe
+  policies, rules, scopes, targets, lifecycle stages, severities,
+  conformance levels, engines, and enforcement modes across an API estate.
+version: 1.0.0
+created: '2026-05-22'
+modified: '2026-05-22'
+
+# Core governance objects
+objects:
+  - term: GovernancePolicy
+    definition: >-
+      A named bundle of governance rules applied with a defined scope,
+      lifecycle stage, ownership, and enforcement mode.
+  - term: GovernanceRule
+    definition: >-
+      A single, machine-enforceable check applied to an API artifact or
+      runtime signal by a linter, registry, gateway, or monitor.
+  - term: StyleGuide
+    definition: >-
+      A collection of related design and naming rules expressed as a
+      ruleset and consumed by a linter.
+  - term: Ruleset
+    definition: >-
+      A serialised set of governance rules in the format expected by a
+      specific engine (Spectral, vacuum, Redocly, Speakeasy).
+  - term: Linter
+    definition: >-
+      Tool that mechanically checks an API artifact against a ruleset and
+      reports violations.
+  - term: Registry
+    definition: >-
+      System that stores API artifacts and enforces compatibility, validity,
+      and integrity rules across their evolution.
+  - term: GovernanceBody
+    definition: >-
+      Group accountable for owning, reviewing, and approving changes to the
+      governance program.
+
+# Scopes
+scope:
+  - term: SpecGovernance
+    definition: >-
+      Governing the correctness and structure of API specification
+      artifacts such as OpenAPI, AsyncAPI, JSON Schema, GraphQL.
+  - term: DesignGovernance
+    definition: >-
+      Governing the design choices encoded in specifications — naming,
+      error shape, pagination, authentication scheme, versioning.
+  - term: SecurityGovernance
+    definition: >-
+      Governing security posture — authentication, authorization, OWASP
+      API Top 10 conformance, sensitive data handling.
+  - term: LifecycleGovernance
+    definition: >-
+      Governing how APIs move from design through deprecation and
+      retirement, including review, sign-off, and exception workflows.
+  - term: ExperienceGovernance
+    definition: >-
+      Governing the consumer-facing experience — documentation, SDKs,
+      onboarding, support, status communication.
+  - term: ComplianceGovernance
+    definition: >-
+      Governing regulatory and contractual obligations — GDPR, HIPAA,
+      PCI DSS, FedRAMP, internal audit policies.
+
+# Targets
+target:
+  - term: OpenAPI
+    definition: OpenAPI 2.0, 3.0, 3.1, 3.2 specification documents.
+  - term: AsyncAPI
+    definition: AsyncAPI specification documents for event-driven APIs.
+  - term: JSONSchema
+    definition: JSON Schema documents used as payload contracts.
+  - term: GraphQL
+    definition: GraphQL schema definition language documents.
+  - term: gRPC
+    definition: Protocol Buffers definitions for gRPC services.
+  - term: Avro
+    definition: Apache Avro schemas used with Kafka and similar systems.
+  - term: Protobuf
+    definition: Protocol Buffers schemas for messaging or RPC.
+  - term: Traffic
+    definition: Live request/response traffic captured at a gateway or proxy.
+  - term: Policy
+    definition: Gateway, proxy, or AI control-plane policy configuration.
+  - term: Configuration
+    definition: API platform or gateway configuration files.
+  - term: APIsYml
+    definition: apis.yml/apis.json catalog metadata.
+
+# Lifecycle stages
+lifecycle:
+  - term: Design
+    definition: Specification authoring and review prior to implementation.
+  - term: Build
+    definition: Implementation of the API against the specification.
+  - term: Test
+    definition: Contract tests, integration tests, and security scans.
+  - term: Release
+    definition: Promotion of the API to a production environment.
+  - term: Deprecation
+    definition: Communicated intent to retire an API or operation.
+  - term: Retirement
+    definition: Final removal of an API or operation from service.
+  - term: Runtime
+    definition: Live production operation of the API.
+
+# Severity
+severity:
+  - term: Error
+    definition: Violation blocks a build, deployment, or merge.
+  - term: Warning
+    definition: Violation surfaces a concern but does not block.
+  - term: Info
+    definition: Informational notice; useful but non-actionable.
+  - term: Hint
+    definition: Suggestion for improvement.
+
+# Conformance (RFC 2119)
+conformance:
+  - term: MUST
+    definition: Absolute requirement of the policy or rule.
+  - term: SHOULD
+    definition: Recommendation; valid reasons may exist to deviate.
+  - term: MAY
+    definition: Truly optional behavior.
+  - term: MUSTNOT
+    definition: Absolute prohibition.
+  - term: SHOULDNOT
+    definition: Behavior is discouraged but not forbidden.
+
+# Engines
+engine:
+  - term: Spectral
+    definition: Stoplight's open-source linter for OpenAPI/AsyncAPI/JSON.
+  - term: Vacuum
+    definition: Go-based, Spectral-compatible OpenAPI linter by Dave Shanley.
+  - term: Redocly
+    definition: Redocly CLI linting engine and Reunite workflow.
+  - term: Speakeasy
+    definition: Speakeasy's linter, focused on SDK-readiness and security.
+  - term: Postman
+    definition: Postman API Governance rules and CLI enforcement.
+  - term: Apicurio
+    definition: Apicurio Registry compatibility, validity, integrity rules.
+  - term: Custom
+    definition: Bespoke organisational governance engine.
+
+# Enforcement modes
+enforcement:
+  - term: Advisory
+    definition: Violations are reported but do not block.
+  - term: Blocking
+    definition: Violations fail the build, merge, or deployment.
+  - term: Remediated
+    definition: Violations are auto-fixed where the engine supports it.
+  - term: Monitored
+    definition: Runtime violations are surfaced to an observability system.
+
+# Status
+status:
+  - term: Draft
+    definition: Authored but not yet active.
+  - term: Active
+    definition: In force and being enforced.
+  - term: Deprecated
+    definition: Slated for removal; new artifacts should not adopt it.
+  - term: Retired
+    definition: No longer enforced or referenced.

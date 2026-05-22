@@ -1,0 +1,26 @@
+{
+  "id": "asyncapi-event-governance",
+  "name": "AsyncAPI Event Governance",
+  "description": "Governance policy applied to every AsyncAPI 2.x and 3.x specification published into the event mesh. Covers channel naming, message schema versioning, security scheme presence, and compatibility checks at the schema registry.",
+  "scope": "spec",
+  "target": ["asyncapi", "json-schema", "avro"],
+  "lifecycle": ["design", "build", "release", "runtime"],
+  "enforcement": "blocking",
+  "engine": "apicurio",
+  "conformance": "MUST",
+  "rules": [
+    "asyncapi-channel-name-lowercase-dot-separated",
+    "asyncapi-message-schema-versioned",
+    "asyncapi-server-security-required",
+    "asyncapi-payload-additional-properties-false",
+    "registry-backward-compatibility-required"
+  ],
+  "owner": "Event Platform Team",
+  "approvers": ["VP Engineering", "Principal Architect"],
+  "tags": ["AsyncAPI", "Events", "Registry", "Compatibility"],
+  "guidanceUrl": "https://www.apicur.io/registry/",
+  "status": "active",
+  "version": "1.0.0",
+  "created": "2026-04-01",
+  "modified": "2026-05-22"
+}

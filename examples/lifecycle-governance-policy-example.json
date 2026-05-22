@@ -1,0 +1,26 @@
+{
+  "id": "api-lifecycle-deprecation",
+  "name": "API Deprecation and Retirement",
+  "description": "Lifecycle governance policy controlling how an API moves from active service to deprecated and retired. Requires a minimum 180-day deprecation window, Sunset HTTP header, changelog entry, and consumer notification before any endpoint can be removed.",
+  "scope": "lifecycle",
+  "target": ["openapi", "configuration"],
+  "lifecycle": ["deprecation", "retirement"],
+  "enforcement": "blocking",
+  "engine": "custom",
+  "conformance": "MUST",
+  "rules": [
+    "lifecycle-deprecation-window-min-180-days",
+    "lifecycle-sunset-header-present",
+    "lifecycle-changelog-entry-required",
+    "lifecycle-consumer-notification-sent",
+    "lifecycle-replacement-link-required"
+  ],
+  "owner": "API Governance Working Group",
+  "approvers": ["VP Product", "Director Customer Success"],
+  "tags": ["Lifecycle", "Deprecation", "Sunset", "Communication"],
+  "guidanceUrl": "https://developer.apievangelist.com/feeds/policies/",
+  "status": "active",
+  "version": "1.1.0",
+  "created": "2026-03-10",
+  "modified": "2026-05-22"
+}

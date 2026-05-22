@@ -1,0 +1,28 @@
+{
+  "id": "oas3-operation-summary-title-case",
+  "name": "OpenAPI Operation Summary Must Be Title Case",
+  "description": "Every OpenAPI operation's summary field must be written in Title Case to keep documentation portals, code generators, and reading experience consistent across the API estate.",
+  "message": "Operation summary MUST be Title Case.",
+  "rationale": "Mixed casing in summaries breaks documentation rendering and confuses SDK consumers.",
+  "severity": "warn",
+  "target": "openapi",
+  "scope": "design",
+  "lifecycle": "design",
+  "given": "$.paths[*][get,post,put,patch,delete,options,head].summary",
+  "then": {
+    "function": "pattern",
+    "functionOptions": {
+      "match": "^([A-Z][a-z0-9]*)( [A-Z][a-z0-9]*)*$"
+    }
+  },
+  "function": "pattern",
+  "conformance": "MUST",
+  "engine": "spectral",
+  "tags": ["OpenAPI", "Design", "Naming", "Documentation"],
+  "guidanceUrl": "https://developer.apievangelist.com/feeds/rules/",
+  "owner": "API Governance Working Group",
+  "created": "2026-01-15",
+  "modified": "2026-05-22",
+  "version": "1.0.0",
+  "status": "active"
+}

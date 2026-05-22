@@ -1,0 +1,38 @@
+{
+  "id": "openapi-design-baseline",
+  "name": "OpenAPI Design Baseline",
+  "description": "Baseline design rules every public OpenAPI 3.x specification must satisfy before it can be promoted to production. Composes Spectral-compatible rules covering naming, error shape, authentication, versioning, and documentation completeness.",
+  "scope": "design",
+  "target": ["openapi"],
+  "lifecycle": ["design", "build", "test"],
+  "enforcement": "blocking",
+  "engine": "spectral",
+  "conformance": "MUST",
+  "rules": [
+    "oas3-info-contact",
+    "oas3-info-description",
+    "oas3-info-license",
+    "oas3-operation-summary-title-case",
+    "oas3-operation-tag-defined",
+    "oas3-paths-kebab-case",
+    "oas3-property-snake-case",
+    "oas3-error-response-rfc7807",
+    "oas3-security-required",
+    "oas3-version-semver"
+  ],
+  "owner": "API Governance Working Group",
+  "approvers": ["VP Engineering", "VP Product", "CISO"],
+  "exceptions": [
+    {
+      "api": "legacy-billing-v1",
+      "reason": "Retiring 2026-12-31 — exempt from snake_case migration.",
+      "expires": "2026-12-31"
+    }
+  ],
+  "tags": ["OpenAPI", "Design", "Baseline", "Spectral"],
+  "guidanceUrl": "https://developer.apievangelist.com/feeds/rules/",
+  "status": "active",
+  "version": "1.2.0",
+  "created": "2026-01-15",
+  "modified": "2026-05-22"
+}

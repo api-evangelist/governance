@@ -1,0 +1,28 @@
+{
+  "id": "owasp-api-security-baseline",
+  "name": "OWASP API Security Baseline",
+  "description": "Mandatory security governance policy applied to every external-facing OpenAPI contract. Enforces OWASP API Security Top 10 conformance checks at design time and re-validates them with a security scan at release.",
+  "scope": "security",
+  "target": ["openapi"],
+  "lifecycle": ["design", "test", "release", "runtime"],
+  "enforcement": "blocking",
+  "engine": "spectral",
+  "conformance": "MUST",
+  "rules": [
+    "owasp-no-api-keys-in-url",
+    "owasp-define-security-scheme",
+    "owasp-protection-global-unsafe",
+    "owasp-rate-limit-on-write",
+    "owasp-no-numeric-ids",
+    "owasp-define-error-validation",
+    "owasp-no-additional-properties"
+  ],
+  "owner": "CISO",
+  "approvers": ["CISO", "VP Engineering"],
+  "tags": ["OWASP", "Security", "OpenAPI", "Baseline"],
+  "guidanceUrl": "https://owasp.org/www-project-api-security/",
+  "status": "active",
+  "version": "1.0.0",
+  "created": "2026-02-01",
+  "modified": "2026-05-22"
+}
