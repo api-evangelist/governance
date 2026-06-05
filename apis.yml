@@ -10,301 +10,303 @@ description: >-
 type: Index
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 tags:
-  - Governance
-  - Policies
-  - Rules
-  - Spectral
-  - Linting
-  - Lifecycle
-  - Compliance
-  - Standards
-  - OpenAPI
-  - AsyncAPI
+- Governance
+- Policies
+- Rules
+- Spectral
+- Linting
+- Lifecycle
+- Compliance
+- Standards
+- OpenAPI
+- AsyncAPI
 url: >-
   https://raw.githubusercontent.com/api-evangelist/governance/refs/heads/main/apis.yml
 created: '2026-05-22'
 modified: '2026-05-22'
 specificationVersion: '0.19'
 apis:
-  - aid: governance:apiwiz
-    name: Apiwiz API Governance
-    description: >-
-      Federated API management platform with automated linting, build
-      templates, policy enforcement, and multi-gateway governance for the
-      full API lifecycle.
-    humanURL: https://www.apiwiz.io/
-    tags:
-      - Governance
-      - Lifecycle
-      - Multi-Gateway
-      - Spectral
-    properties:
-      - type: DeveloperPortal
-        url: https://www.apiwiz.io/
-      - type: Documentation
-        url: https://docs.apiwiz.io/
-  - aid: governance:treblle
-    name: Treblle API Intelligence and Governance
-    description: >-
-      API observability and governance platform that scores, monitors, and
-      audits production APIs in real time, surfacing design and security
-      issues against OpenAPI specifications.
-    humanURL: https://treblle.com/
-    tags:
-      - Observability
-      - Governance
-      - Runtime
-      - Scoring
-    properties:
-      - type: DeveloperPortal
-        url: https://treblle.com/
-      - type: Documentation
-        url: https://docs.treblle.com/
-  - aid: governance:42crunch
-    name: 42Crunch API Security Platform
-    description: >-
-      Security-first API governance platform that audits OpenAPI contracts,
-      runs 300+ conformance and security checks, performs automated fuzzing,
-      and enforces policies from design through runtime.
-    humanURL: https://42crunch.com/
-    tags:
-      - Security
-      - OWASP
-      - Conformance
-      - Governance
-    properties:
-      - type: DeveloperPortal
-        url: https://42crunch.com/
-      - type: Documentation
-        url: https://docs.42crunch.com/
-  - aid: governance:apicontext
-    name: APIContext (formerly Apimetrics)
-    description: >-
-      API monitoring and governance service measuring availability,
-      performance, and conformance of production APIs from distributed
-      locations for SLA and regulatory reporting.
-    humanURL: https://apicontext.com/
-    tags:
-      - Monitoring
-      - Availability
-      - Performance
-      - Governance
-  - aid: governance:sensedia
-    name: Sensedia SMART API Governance
-    description: >-
-      AI-powered federated governance platform delivering centralized
-      visibility, contract validation, shadow API detection, and lifecycle
-      policy enforcement across multi-cloud and multi-gateway estates.
-    humanURL: https://www.sensedia.com/
-    tags:
-      - Federated Governance
-      - Multi-Gateway
-      - Shadow APIs
-      - Lifecycle
-    properties:
-      - type: DeveloperPortal
-        url: https://www.sensedia.com/
-  - aid: governance:postman-api-governance
-    name: Postman API Governance
-    description: >-
-      Governance product inside the Postman API platform combining a
-      pre-built rule library, custom Spectral-compatible rules, CLI/CI
-      enforcement, and a reporting dashboard for the API estate.
-    humanURL: https://www.postman.com/api-platform/api-governance/
-    tags:
-      - Spectral
-      - Postman
-      - CI
-      - Dashboard
-    properties:
-      - type: DeveloperPortal
-        url: https://www.postman.com/api-platform/api-governance/
-      - type: Documentation
-        url: https://learning.postman.com/docs/api-governance/api-governance-overview/
-  - aid: governance:stoplight-spaces
-    name: Stoplight Spaces and Style Guides
-    description: >-
-      API design platform with built-in style guides, custom Spectral
-      rulesets, and workspace-level governance, now offered as part of
-      SmartBear's API Hub.
-    humanURL: https://stoplight.io/api-governance
-    tags:
-      - Spectral
-      - Style Guides
-      - Design
-      - SmartBear
-    properties:
-      - type: DeveloperPortal
-        url: https://stoplight.io/
-  - aid: governance:spectral
-    name: Spectral
-    description: >-
-      Open-source JSON/YAML linter and style-guide enforcer for OpenAPI,
-      AsyncAPI, and JSON Schema — the de facto standard rule engine behind
-      most API governance products.
-    humanURL: https://stoplight.io/open-source/spectral
-    tags:
-      - Open Source
-      - Linter
-      - OpenAPI
-      - AsyncAPI
-    properties:
-      - type: GitHubRepository
-        url: https://github.com/stoplightio/spectral
-      - type: Documentation
-        url: https://docs.stoplight.io/docs/spectral/
-  - aid: governance:vacuum
-    name: Vacuum
-    description: >-
-      Open-source, Go-based OpenAPI linter that is 100% compatible with
-      Spectral rulesets, supports OpenAPI 2 through 3.2, ships custom Go and
-      JavaScript functions, and adds auto-fix and change-detection.
-    humanURL: https://quobix.com/vacuum/
-    tags:
-      - Open Source
-      - Linter
-      - OpenAPI
-      - Performance
-    properties:
-      - type: GitHubRepository
-        url: https://github.com/daveshanley/vacuum
-  - aid: governance:redocly-reunite
-    name: Redocly Reunite
-    description: >-
-      Redocly's collaborative governance and documentation workspace with
-      Git-backed previews, audit trails, and review workflows that wrap
-      Redocly's OpenAPI linting and bundling toolchain.
-    humanURL: https://redocly.com/reunite
-    tags:
-      - Documentation
-      - Review Workflows
-      - Git
-      - Linting
-    properties:
-      - type: DeveloperPortal
-        url: https://redocly.com/
-  - aid: governance:optic
-    name: Optic
-    description: >-
-      Open-source and hosted tool that captures real API traffic, diffs it
-      against the OpenAPI contract, and turns every change into a reviewable
-      pull request with breaking-change detection.
-    humanURL: https://www.useoptic.com/
-    tags:
-      - Diffing
-      - Breaking Changes
-      - CI
-      - Traffic Capture
-    properties:
-      - type: GitHubRepository
-        url: https://github.com/opticdev/optic
-  - aid: governance:speakeasy-lint
-    name: Speakeasy Linter
-    description: >-
-      OpenAPI linter shipped with the Speakeasy SDK generation platform
-      offering 90+ rules across six categories — SDK generation, spec
-      correctness, best practices, security, schema validation, and
-      Speakeasy-specific checks.
-    humanURL: https://www.speakeasy.com/docs/linting
-    tags:
-      - SDK Generation
-      - Linter
-      - OpenAPI
-      - Rulesets
-    properties:
-      - type: Documentation
-        url: https://www.speakeasy.com/docs/linting
-      - type: GitHubRepository
-        url: https://github.com/speakeasy-api/openapi
-  - aid: governance:apicurio-registry
-    name: Apicurio Registry
-    description: >-
-      Open-source runtime registry that stores OpenAPI, AsyncAPI, GraphQL,
-      Avro, Protobuf, JSON Schema, WSDL, and XSD artifacts and enforces
-      validity, compatibility, and integrity rules across their lifecycle.
-    humanURL: https://www.apicur.io/registry/
-    tags:
-      - Registry
-      - Schema
-      - Compatibility
-      - Open Source
-    properties:
-      - type: GitHubRepository
-        url: https://github.com/Apicurio/apicurio-registry
-  - aid: governance:reprezen
-    name: RepreZen API Studio
-    description: >-
-      Historical commercial OpenAPI/RAPID-ML modeling IDE that drove
-      contract-first API governance; the product line has been retired and
-      the domain reprezen.com is no longer maintained.
-    humanURL: https://github.com/RepreZen
-    tags:
-      - Historical
-      - OpenAPI
-      - Modeling
-      - Retired
-    properties:
-      - type: GitHubRepository
-        url: https://github.com/RepreZen
-  - aid: governance:bump-sh
-    name: Bump.sh
-    description: >-
-      API documentation hub for OpenAPI and AsyncAPI with automatic
-      changelog generation, breaking-change detection, and contract-level
-      policy enforcement that feeds into governance workflows.
-    humanURL: https://bump.sh/
-    tags:
-      - Documentation
-      - Changelog
-      - Breaking Changes
-      - AsyncAPI
-    properties:
-      - type: DeveloperPortal
-        url: https://bump.sh/
-      - type: Documentation
-        url: https://docs.bump.sh/
-  - aid: governance:program
-    name: API Governance Program
-    description: >-
-      Rules, vocabulary, JSON Schema, JSON-LD, and example records for an
-      organizational API governance program covering spec, design, security,
-      and lifecycle governance across the API estate.
-    tags:
-      - Governance
-      - Policies
-      - Rules
-      - Lifecycle
-    properties:
-      - type: JSONSchema
-        url: >-
-          https://raw.githubusercontent.com/api-evangelist/governance/main/json-schema/governance-rule-schema.json
-      - type: JSONSchema
-        url: >-
-          https://raw.githubusercontent.com/api-evangelist/governance/main/json-schema/governance-policy-schema.json
-      - type: JSONLD
-        url: >-
-          https://raw.githubusercontent.com/api-evangelist/governance/main/json-ld/governance-context.jsonld
-      - type: Vocabulary
-        url: >-
-          https://raw.githubusercontent.com/api-evangelist/governance/main/vocabulary/governance-vocabulary.yml
-common:
-  - type: Reference
-    url: https://stoplight.io/open-source/spectral
-  - type: Reference
-    url: https://github.com/daveshanley/vacuum
-  - type: Reference
-    url: https://www.postman.com/api-platform/api-governance/
-  - type: Reference
-    url: https://owasp.org/www-project-api-security/
-  - type: Reference
-    url: https://developer.apievangelist.com/feeds/policies/
-  - type: Reference
-    url: https://developer.apievangelist.com/feeds/rules/
-  - type: GitHubOrganization
-    url: https://github.com/api-evangelist
+- aid: governance:apiwiz
+  name: Apiwiz API Governance
+  description: >-
+    Federated API management platform with automated linting, build
+    templates, policy enforcement, and multi-gateway governance for the
+    full API lifecycle.
+  humanURL: https://www.apiwiz.io/
+  tags:
+  - Governance
+  - Lifecycle
+  - Multi-Gateway
+  - Spectral
+  properties:
   - type: DeveloperPortal
-    url: https://developer.apievangelist.com/
+    url: https://www.apiwiz.io/
+  - type: Documentation
+    url: https://docs.apiwiz.io/
+  - url: graphql/governance-graphql.md
+    type: GraphQL
+- aid: governance:treblle
+  name: Treblle API Intelligence and Governance
+  description: >-
+    API observability and governance platform that scores, monitors, and
+    audits production APIs in real time, surfacing design and security
+    issues against OpenAPI specifications.
+  humanURL: https://treblle.com/
+  tags:
+  - Observability
+  - Governance
+  - Runtime
+  - Scoring
+  properties:
+  - type: DeveloperPortal
+    url: https://treblle.com/
+  - type: Documentation
+    url: https://docs.treblle.com/
+- aid: governance:42crunch
+  name: 42Crunch API Security Platform
+  description: >-
+    Security-first API governance platform that audits OpenAPI contracts,
+    runs 300+ conformance and security checks, performs automated fuzzing,
+    and enforces policies from design through runtime.
+  humanURL: https://42crunch.com/
+  tags:
+  - Security
+  - OWASP
+  - Conformance
+  - Governance
+  properties:
+  - type: DeveloperPortal
+    url: https://42crunch.com/
+  - type: Documentation
+    url: https://docs.42crunch.com/
+- aid: governance:apicontext
+  name: APIContext (formerly Apimetrics)
+  description: >-
+    API monitoring and governance service measuring availability,
+    performance, and conformance of production APIs from distributed
+    locations for SLA and regulatory reporting.
+  humanURL: https://apicontext.com/
+  tags:
+  - Monitoring
+  - Availability
+  - Performance
+  - Governance
+- aid: governance:sensedia
+  name: Sensedia SMART API Governance
+  description: >-
+    AI-powered federated governance platform delivering centralized
+    visibility, contract validation, shadow API detection, and lifecycle
+    policy enforcement across multi-cloud and multi-gateway estates.
+  humanURL: https://www.sensedia.com/
+  tags:
+  - Federated Governance
+  - Multi-Gateway
+  - Shadow APIs
+  - Lifecycle
+  properties:
+  - type: DeveloperPortal
+    url: https://www.sensedia.com/
+- aid: governance:postman-api-governance
+  name: Postman API Governance
+  description: >-
+    Governance product inside the Postman API platform combining a
+    pre-built rule library, custom Spectral-compatible rules, CLI/CI
+    enforcement, and a reporting dashboard for the API estate.
+  humanURL: https://www.postman.com/api-platform/api-governance/
+  tags:
+  - Spectral
+  - Postman
+  - CI
+  - Dashboard
+  properties:
+  - type: DeveloperPortal
+    url: https://www.postman.com/api-platform/api-governance/
+  - type: Documentation
+    url: https://learning.postman.com/docs/api-governance/api-governance-overview/
+- aid: governance:stoplight-spaces
+  name: Stoplight Spaces and Style Guides
+  description: >-
+    API design platform with built-in style guides, custom Spectral
+    rulesets, and workspace-level governance, now offered as part of
+    SmartBear's API Hub.
+  humanURL: https://stoplight.io/api-governance
+  tags:
+  - Spectral
+  - Style Guides
+  - Design
+  - SmartBear
+  properties:
+  - type: DeveloperPortal
+    url: https://stoplight.io/
+- aid: governance:spectral
+  name: Spectral
+  description: >-
+    Open-source JSON/YAML linter and style-guide enforcer for OpenAPI,
+    AsyncAPI, and JSON Schema — the de facto standard rule engine behind
+    most API governance products.
+  humanURL: https://stoplight.io/open-source/spectral
+  tags:
+  - Open Source
+  - Linter
+  - OpenAPI
+  - AsyncAPI
+  properties:
+  - type: GitHubRepository
+    url: https://github.com/stoplightio/spectral
+  - type: Documentation
+    url: https://docs.stoplight.io/docs/spectral/
+- aid: governance:vacuum
+  name: Vacuum
+  description: >-
+    Open-source, Go-based OpenAPI linter that is 100% compatible with
+    Spectral rulesets, supports OpenAPI 2 through 3.2, ships custom Go and
+    JavaScript functions, and adds auto-fix and change-detection.
+  humanURL: https://quobix.com/vacuum/
+  tags:
+  - Open Source
+  - Linter
+  - OpenAPI
+  - Performance
+  properties:
+  - type: GitHubRepository
+    url: https://github.com/daveshanley/vacuum
+- aid: governance:redocly-reunite
+  name: Redocly Reunite
+  description: >-
+    Redocly's collaborative governance and documentation workspace with
+    Git-backed previews, audit trails, and review workflows that wrap
+    Redocly's OpenAPI linting and bundling toolchain.
+  humanURL: https://redocly.com/reunite
+  tags:
+  - Documentation
+  - Review Workflows
+  - Git
+  - Linting
+  properties:
+  - type: DeveloperPortal
+    url: https://redocly.com/
+- aid: governance:optic
+  name: Optic
+  description: >-
+    Open-source and hosted tool that captures real API traffic, diffs it
+    against the OpenAPI contract, and turns every change into a reviewable
+    pull request with breaking-change detection.
+  humanURL: https://www.useoptic.com/
+  tags:
+  - Diffing
+  - Breaking Changes
+  - CI
+  - Traffic Capture
+  properties:
+  - type: GitHubRepository
+    url: https://github.com/opticdev/optic
+- aid: governance:speakeasy-lint
+  name: Speakeasy Linter
+  description: >-
+    OpenAPI linter shipped with the Speakeasy SDK generation platform
+    offering 90+ rules across six categories — SDK generation, spec
+    correctness, best practices, security, schema validation, and
+    Speakeasy-specific checks.
+  humanURL: https://www.speakeasy.com/docs/linting
+  tags:
+  - SDK Generation
+  - Linter
+  - OpenAPI
+  - Rulesets
+  properties:
+  - type: Documentation
+    url: https://www.speakeasy.com/docs/linting
+  - type: GitHubRepository
+    url: https://github.com/speakeasy-api/openapi
+- aid: governance:apicurio-registry
+  name: Apicurio Registry
+  description: >-
+    Open-source runtime registry that stores OpenAPI, AsyncAPI, GraphQL,
+    Avro, Protobuf, JSON Schema, WSDL, and XSD artifacts and enforces
+    validity, compatibility, and integrity rules across their lifecycle.
+  humanURL: https://www.apicur.io/registry/
+  tags:
+  - Registry
+  - Schema
+  - Compatibility
+  - Open Source
+  properties:
+  - type: GitHubRepository
+    url: https://github.com/Apicurio/apicurio-registry
+- aid: governance:reprezen
+  name: RepreZen API Studio
+  description: >-
+    Historical commercial OpenAPI/RAPID-ML modeling IDE that drove
+    contract-first API governance; the product line has been retired and
+    the domain reprezen.com is no longer maintained.
+  humanURL: https://github.com/RepreZen
+  tags:
+  - Historical
+  - OpenAPI
+  - Modeling
+  - Retired
+  properties:
+  - type: GitHubRepository
+    url: https://github.com/RepreZen
+- aid: governance:bump-sh
+  name: Bump.sh
+  description: >-
+    API documentation hub for OpenAPI and AsyncAPI with automatic
+    changelog generation, breaking-change detection, and contract-level
+    policy enforcement that feeds into governance workflows.
+  humanURL: https://bump.sh/
+  tags:
+  - Documentation
+  - Changelog
+  - Breaking Changes
+  - AsyncAPI
+  properties:
+  - type: DeveloperPortal
+    url: https://bump.sh/
+  - type: Documentation
+    url: https://docs.bump.sh/
+- aid: governance:program
+  name: API Governance Program
+  description: >-
+    Rules, vocabulary, JSON Schema, JSON-LD, and example records for an
+    organizational API governance program covering spec, design, security,
+    and lifecycle governance across the API estate.
+  tags:
+  - Governance
+  - Policies
+  - Rules
+  - Lifecycle
+  properties:
+  - type: JSONSchema
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/governance/main/json-schema/governance-rule-schema.json
+  - type: JSONSchema
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/governance/main/json-schema/governance-policy-schema.json
+  - type: JSONLD
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/governance/main/json-ld/governance-context.jsonld
+  - type: Vocabulary
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/governance/main/vocabulary/governance-vocabulary.yml
+common:
+- type: Reference
+  url: https://stoplight.io/open-source/spectral
+- type: Reference
+  url: https://github.com/daveshanley/vacuum
+- type: Reference
+  url: https://www.postman.com/api-platform/api-governance/
+- type: Reference
+  url: https://owasp.org/www-project-api-security/
+- type: Reference
+  url: https://developer.apievangelist.com/feeds/policies/
+- type: Reference
+  url: https://developer.apievangelist.com/feeds/rules/
+- type: GitHubOrganization
+  url: https://github.com/api-evangelist
+- type: DeveloperPortal
+  url: https://developer.apievangelist.com/
 maintainers:
-  - FN: Kin Lane
-    email: kin@apievangelist.com
-    X-github: kinlane
+- FN: Kin Lane
+  email: kin@apievangelist.com
+  X-github: kinlane
