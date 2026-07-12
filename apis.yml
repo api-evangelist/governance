@@ -290,6 +290,8 @@ apis:
     url: >-
       https://raw.githubusercontent.com/api-evangelist/governance/main/vocabulary/governance-vocabulary.yml
 common:
+- type: DomainSecurity
+  url: security/governance-domain-security.yml
 - type: Reference
   url: https://stoplight.io/open-source/spectral
 - type: Reference
