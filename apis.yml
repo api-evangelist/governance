@@ -1,5 +1,6 @@
 aid: governance
 name: API Governance
+kind: topic
 description: >-
   API Governance is the practice of defining and enforcing the policies,
   standards, and processes that guide how APIs are designed, built, secured,
