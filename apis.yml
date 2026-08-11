@@ -302,6 +302,17 @@ apis:
       - type: DeveloperPortal
         url: https://www.sensedia.com/
 common:
+  - type: IssueTracker
+    url: https://github.com/stoplightio/spectral/issues
+  - type: Releases
+    url: https://github.com/stoplightio/spectral/releases
+  - type: CodeOfConduct
+    url: https://github.com/stoplightio/spectral/blob/develop/.github/CODE_OF_CONDUCT.md
+  - type: ContributionGuide
+    url: https://github.com/stoplightio/spectral/blob/develop/CONTRIBUTING.md
+  - type: License
+    name: Apache-2.0
+    url: https://github.com/stoplightio/spectral/blob/develop/LICENSE
   - type: DomainSecurity
     url: security/governance-domain-security.yml
   - type: Reference
