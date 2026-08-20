@@ -143,6 +143,11 @@ apis:
       most API governance products.
     humanURL: https://stoplight.io/open-source/spectral
     tags:
+      - Open-Source
+      - Linter
+      - OpenAPI
+      - AsyncAPI
+    tags_raw:
       - Open Source
       - Linter
       - OpenAPI
@@ -160,6 +165,11 @@ apis:
       JavaScript functions, and adds auto-fix and change-detection.
     humanURL: https://quobix.com/vacuum/
     tags:
+      - Open-Source
+      - Linter
+      - OpenAPI
+      - Performance
+    tags_raw:
       - Open Source
       - Linter
       - OpenAPI
@@ -223,6 +233,11 @@ apis:
       validity, compatibility, and integrity rules across their lifecycle.
     humanURL: https://www.apicur.io/registry/
     tags:
+      - Registry
+      - Schema
+      - Compatibility
+      - Open-Source
+    tags_raw:
       - Registry
       - Schema
       - Compatibility
