@@ -126,6 +126,11 @@ apis:
       - Spectral
       - Postman
       - CI
+      - Dashboards
+    tags_raw:
+      - Spectral
+      - Postman
+      - CI
       - Dashboard
     properties:
       - type: DeveloperPortal
