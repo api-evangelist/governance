@@ -67,8 +67,6 @@ apis:
         url: https://www.apiwiz.io/
       - type: Documentation
         url: https://docs.apiwiz.io/
-      - url: graphql/governance-graphql.md
-        type: GraphQL
   - aid: governance:treblle
     name: Treblle API Intelligence and Governance
     description: >-
@@ -160,7 +158,7 @@ apis:
       most API governance products.
     humanURL: https://stoplight.io/open-source/spectral
     tags:
-      - Open-Source
+      - Open Source
       - Linter
       - OpenAPI
       - AsyncAPI
@@ -169,6 +167,7 @@ apis:
       - Linter
       - OpenAPI
       - AsyncAPI
+      - Open-Source
     properties:
       - type: GitHubRepository
         url: https://github.com/stoplightio/spectral
@@ -182,7 +181,7 @@ apis:
       JavaScript functions, and adds auto-fix and change-detection.
     humanURL: https://quobix.com/vacuum/
     tags:
-      - Open-Source
+      - Open Source
       - Linter
       - OpenAPI
       - Performance
@@ -191,6 +190,7 @@ apis:
       - Linter
       - OpenAPI
       - Performance
+      - Open-Source
     properties:
       - type: GitHubRepository
         url: https://github.com/daveshanley/vacuum
@@ -253,12 +253,13 @@ apis:
       - Registry
       - Schema
       - Compatibility
-      - Open-Source
+      - Open Source
     tags_raw:
       - Registry
       - Schema
       - Compatibility
       - Open Source
+      - Open-Source
     properties:
       - type: GitHubRepository
         url: https://github.com/Apicurio/apicurio-registry

@@ -1,1 +1,0 @@
-# API Governance GraphQL API
