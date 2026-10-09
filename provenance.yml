@@ -18,9 +18,6 @@ artifacts:
   examples/spec-governance-rule-example.json:
     method: unknown
     evidence: no authorship recorded
-  graphql/governance-graphql.md:
-    method: unknown
-    evidence: no authorship recorded
   json-ld/governance-context.jsonld:
     method: unknown
     evidence: no authorship recorded
