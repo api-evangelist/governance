@@ -204,6 +204,11 @@ apis:
     tags:
       - Documentation
       - Review Workflows
+      - Version Control
+      - Linting
+    tags_raw:
+      - Documentation
+      - Review Workflows
       - Git
       - Linting
     properties:
